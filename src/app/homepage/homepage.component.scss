@@ -46,18 +46,19 @@ img {
 }
 
 .card__container__text {
-  display: grid;
+  display: flex;
+  position: relative;
   background: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__text {
   display: grid;
-  align-items: center;
   font-size: 45px;
-  width: 60%;
-  justify-self: center;
   font-weight: bold;
-  margin-top: 91px;
+  margin-top: -40px;
 }
 
 .card__description {
@@ -65,19 +66,16 @@ img {
   font-size: 15px;
   color: gray;
   justify-self: center;
-  width: 55%;
-  margin-left: -34px;
-  margin-top: 15px;
+  margin-top: 25px;
   line-height: 1.4;
 }
 
 .card__shop {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 2fr 5fr;
-  margin-top: -15px;
-  margin-left: 139px;
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
 }
+
 .card__shop__label {
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -85,8 +83,12 @@ img {
 }
 
 .card__container__switch {
+  position: absolute;
   display: flex;
-  align-items: flex-end;
+  justify-content: left;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
 }
 
 .card__switch {
@@ -103,4 +105,42 @@ img {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+
+// Card1
+
+
+.container__card__images1 {
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-self: center;
+  align-items: center;
+}
+
+.card__image1__text {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 55px;
+}
+
+.card__image1__title {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card__image1__description {
+  color: gray;
+}
+
+
+.container__text {
+  display: flex;
+  flex-direction: column;
+  width: 57%;
+  margin: auto;
 }
