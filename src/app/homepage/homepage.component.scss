@@ -1,3 +1,6 @@
+// Container
+
+
 .container {
   display: grid;
   position: absolute;
@@ -7,10 +10,34 @@
   align-items: center;
 }
 
+
+// Header
+
+
 .header__container {
   display: grid;
   align-items: center;
 }
+
+img {
+  cursor: pointer;
+}
+
+.header__items {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+}
+.header__item {
+  display: grid;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+
+// Card
+
 
 .container__card__images {
   z-index: -1;
@@ -30,7 +57,7 @@
   width: 60%;
   justify-self: center;
   font-weight: bold;
-  margin-top: 58px;
+  margin-top: 91px;
 }
 
 .card__description {
@@ -40,37 +67,40 @@
   justify-self: center;
   width: 55%;
   margin-left: -34px;
-  margin-top: -11px;
+  margin-top: 15px;
   line-height: 1.4;
 }
 
-img {
-  cursor: pointer;
-  display: grid;
-}
-
-.header__items {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 30px;
-}
-.header__item {
-  display: grid;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-}
-
-// Shop
 .card__shop {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 2fr 5fr;
-  margin-top: -72px;
+  margin-top: -15px;
   margin-left: 139px;
 }
 .card__shop__label {
   text-transform: uppercase;
   letter-spacing: 8px;
   font-weight: 600;
+}
+
+.card__container__switch {
+  display: flex;
+  align-items: flex-end;
+}
+
+.card__switch {
+  background: black;
+  position: relative;
+  width: 85px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+}
+
+.card__switch__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
