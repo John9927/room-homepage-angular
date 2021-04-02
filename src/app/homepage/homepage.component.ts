@@ -45,28 +45,37 @@ const arr2: SlideStatic[] = [
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-
-  readonly slide: Slide[] = arr;
+  s
+  readonly slides: Slide[] = arr;
   readonly slideStatic: SlideStatic[] = arr2;
 
   currentIndex: number = 0;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onClickArrowRight() {
-    this.currentIndex++;
-    if(this.currentIndex === 3) {
+    const tempIndex = this.currentIndex + 1;
+    if (tempIndex < this.slides.length) {
+      this.currentIndex++;
+    }
+    else {
       this.currentIndex = 0;
     }
+    console.log(this.currentIndex)
   }
 
   onClickArrowLeft() {
-    this.currentIndex--;
-    if(this.currentIndex === -1) {
-      this.currentIndex = 2;
+    const tempIndex = this.currentIndex - 1;
+    if (tempIndex < 0) {
+      this.currentIndex = this.slides.length - 1;
     }
+    else {
+      this.currentIndex--;
+    }
+    console.log(this.currentIndex)
+
   }
 
 }

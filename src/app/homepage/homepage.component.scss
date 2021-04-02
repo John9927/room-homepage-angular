@@ -89,10 +89,11 @@ img {
   justify-content: left;
   width: 100%;
   bottom: 0px;
-  left: 0px;
+  left: -1px;
 }
 
 .card__switch {
+  user-select: none;
   background: black;
   position: relative;
   width: 80px;
