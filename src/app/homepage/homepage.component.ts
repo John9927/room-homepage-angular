@@ -13,13 +13,13 @@ const arr: Slide[] = [
     img: './../../assets/images/desktop-image-hero-1.jpg'
   },
   {
-    title: 'PAGINA 2',
-    description: 'PAGINA 2',
+    title: 'We are available all across the globe',
+    description: 'With stores all over the world, it s easy for you to find furniture for your home or place of business. Locally, we re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Dont hesitate to contact us today.',
     img: './../../assets/images/desktop-image-hero-2.jpg'
   },
   {
-    title: 'PAGINA 3',
-    description: 'PAGINA 3',
+    title: 'Manufactured with the best materials',
+    description: 'Our modern furniture store provinde a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of exprerience in this industry, we understand what customers want for their home and office.',
     img: './../../assets/images/desktop-image-hero-3.jpg'
   }
 ]
@@ -47,20 +47,26 @@ const arr2: SlideStatic[] = [
 export class HomepageComponent implements OnInit {
 
   readonly slide: Slide[] = arr;
-  readonly slideStatic: SlideStatic[] = arr2
+  readonly slideStatic: SlideStatic[] = arr2;
+
+  currentIndex: number = 0;
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.slide)
-  }
-
-
-  onClickArrowLeft() {
-    console.log("OnClick Arrow Left");
-  }
+  ngOnInit(): void {}
 
   onClickArrowRight() {
-    console.log("OnClick Arrow Right");
+    this.currentIndex++;
+    if(this.currentIndex === 3) {
+      this.currentIndex = 0;
+    }
   }
+
+  onClickArrowLeft() {
+    this.currentIndex--;
+    if(this.currentIndex === -1) {
+      this.currentIndex = 2;
+    }
+  }
+
 }
