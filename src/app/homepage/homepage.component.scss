@@ -80,6 +80,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 8px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .card__container__switch {
@@ -94,10 +95,12 @@ img {
 .card__switch {
   background: black;
   position: relative;
-  width: 85px;
+  width: 80px;
   height: 78px;
   display: flex;
+  cursor: pointer;
   justify-content: center;
+  margin-right: -1px;
 }
 
 .card__switch__image {
@@ -135,12 +138,15 @@ img {
 
 .card__image1__description {
   color: gray;
+  font-size: 15px;
+  margin-top: 5px;
+  line-height: 1.4;
 }
 
 
 .container__text {
   display: flex;
   flex-direction: column;
-  width: 57%;
+  width: 70%;
   margin: auto;
 }
