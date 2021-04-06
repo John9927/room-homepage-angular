@@ -109,6 +109,10 @@
   left: -1px;
 }
 
+.card__container__switch2 {
+  display: none;
+}
+
 .card__switch {
   user-select: none;
   background: black;
@@ -189,6 +193,8 @@
   .container__card__images {
     grid-template-rows: auto;
     grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
   }
 
   .hamburger {
@@ -219,6 +225,39 @@
   }
 
   .card__container__switch {
-    bottom: inherit;
+    display: none;
+  }
+
+
+  // Switch
+  .card__container__switch2 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    bottom: 2px;
+  }
+
+  .card__switch2 {
+    user-select: none;
+    background: black;
+    position: relative;
+    width: 60px;
+    height: 58px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    margin-right: -1px;
+  }
+
+  .card__switch2:hover {
+    background:  hsl(0, 0%, 27%);
+  }
+
+  .card__switch__image2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }

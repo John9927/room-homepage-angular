@@ -17,7 +17,22 @@
 
 <!-- Card -->
 <div class="container__card__images">
-  <img class="card__images" srcset="{{slides[this.currentIndex].img}}, {{slides[this.currentIndex].imgMobile}} 375w" >
+  <div class="container__images" style="position: relative;">
+    <img class="card__images" srcset="{{slides[this.currentIndex].img}}, {{slides[this.currentIndex].imgMobile}} 375w">
+    <!-- Switch Mobile -->
+    <div class="card__container__switch2">
+      <div class="card__switch2" (click)="onClickArrowLeft()">
+        <div class="card__switch__image2">
+          <img src="./../../assets/images/icon-angle-left.svg">
+        </div>
+      </div>
+      <div class="card__switch2" (click)="onClickArrowRight()">
+        <div class="card__switch__image2">
+          <img src="./../../assets/images/icon-angle-right.svg">
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="card__container__text">
     <div class="container__text">
     <span class="card__text">{{slides[this.currentIndex].title}}</span>
@@ -26,7 +41,7 @@
       <span class="card__shop__label">Shop Now</span>
       <img style="margin-left: 20px;" src="./../../assets/images/icon-arrow.svg">
     </div>
-    <!-- Switch -->
+    <!-- Switch Desktop-->
     <div class="card__container__switch">
       <div class="card__switch" (click)="onClickArrowLeft()">
         <div class="card__switch__image">
