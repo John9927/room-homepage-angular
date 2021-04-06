@@ -8,11 +8,24 @@
   grid-auto-flow: column;
   gap: 60px;
   align-items: center;
+  z-index: 1;
+}
+
+#hamburger__img {
+  background: url('./../../assets/images/icon-hamburger.svg') no-repeat;
+  height: 20px;
+  width: 20px;
 }
 
 
 // Header
 
+.header__click {
+  height: 130px;
+  background: white;
+  width: 100%;
+  z-index: 1;
+}
 
 .header__container {
   display: grid;
@@ -25,14 +38,25 @@
   gap: 30px;
 }
 
-.header__item {
+#items {
+  color: white;
+}
+
+#header__item,
+#header__item2,
+#header__item3,
+#header__item4 {
   display: grid;
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.header__item:hover {
+#header__item:hover,
+#header__item2:hover,
+#header__item3:hover,
+#header__item4:hover {
   border-bottom: 2px solid white;
   display: flex;
   justify-content: center;
@@ -105,7 +129,7 @@
   display: flex;
   justify-content: left;
   width: 100%;
-  bottom: 0px;
+  bottom: 2px;
   left: -1px;
 }
 
@@ -146,6 +170,7 @@
   grid-template-columns: 1fr 2fr 1fr;
   justify-self: center;
   align-items: center;
+  margin-top: -2px;
 }
 
 .card__image1__text {
@@ -188,6 +213,7 @@
     justify-content: center;
     width: 100%;
     padding: 50px 0px 50px 0px;
+    z-index: 1;
   }
 
   .container__text {
@@ -208,6 +234,11 @@
     left: 0;
     position: absolute;
     margin-left: 30px;
+    margin-top: -7px;
+  }
+
+  .header__image__container {
+    margin-top: -5px;
   }
 
   .card__text {
@@ -233,6 +264,19 @@
   .card__container__switch {
     display: none;
   }
+
+  #items {
+    gap: 25px;
+    justify-content: flex-end;
+    width: 65%;
+  }
+
+  #header__item,
+  #header__item2,
+  #header__item3,
+  #header__item4 {
+    font-size: 13px;
+}
 
 
   // Switch

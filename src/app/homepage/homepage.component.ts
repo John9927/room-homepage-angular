@@ -56,7 +56,7 @@ export class HomepageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit() {   }
 
   onClickArrowRight() {
     const tempIndex = this.currentIndex + 1;
@@ -76,7 +76,36 @@ export class HomepageComponent implements OnInit {
     else {
       this.currentIndex--;
     }
-
   }
 
+  onClickMenu() {
+    var x = document.getElementById("items");
+    var title = document.getElementById("header__title");
+    var img = document.getElementById("hamburger__img");
+    var container = document.getElementById('container');
+    var header__item = document.getElementById('header__item');
+    var header__item2 = document.getElementById('header__item2');
+    var header__item3 = document.getElementById('header__item3');
+    var header__item4 = document.getElementById('header__item4');
+
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+      title.style.display = "flex";
+      img.style.background = "url('./../../assets/images/icon-hamburger.svg') no-repeat";
+      container.style.background = "inherit";
+      header__item.style.color = "white";
+      header__item2.style.color = "white";
+      header__item3.style.color = "white";
+      header__item4.style.color = "white";
+    } else {
+      x.style.display = "flex";
+      title.style.display = "none";
+      img.style.background = "url('./../../assets/images/icon-close.svg') no-repeat";
+      container.style.background = "white";
+      header__item.style.color = "black";
+      header__item2.style.color = "black";
+      header__item3.style.color = "black";
+      header__item4.style.color = "black";
+    }
+  }
 }

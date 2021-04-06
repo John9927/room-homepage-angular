@@ -1,20 +1,19 @@
 <!-- Container -->
-<div class="container">
+<div class="container" id="container">
   <!-- Header -->
   <div class="header__container">
-    <div class="hamburger">
-      <img src="./../../assets/images/icon-hamburger.svg" alt="">
+    <div class="hamburger" (click)="onClickMenu()">
+      <div id="hamburger__img" alt=""></div>
     </div>
-      <img class="header__image__container" src="./../../assets/images/logo.svg" href="./">
+    <img class="header__image__container" id="header__title" src="./../../assets/images/logo.svg" href="./">
   </div>
-  <div class="header__items">
-    <a class="header__item" href="/">home</a>
-    <a class="header__item" href="/">shop</a>
-    <a class="header__item" href="/">about</a>
-    <a class="header__item" href="/">contact</a>
+  <div class="header__items" id="items">
+    <a id="header__item" href="/">home</a>
+    <a id="header__item2" href="/">shop</a>
+    <a id="header__item3" href="/">about</a>
+    <a id="header__item4" href="/">contact</a>
   </div>
 </div>
-
 <!-- Card -->
 <div class="container__card__images">
   <div class="container__images" style="position: relative;">
@@ -35,35 +34,33 @@
   </div>
   <div class="card__container__text">
     <div class="container__text">
-    <span class="card__text">{{slides[this.currentIndex].title}}</span>
-    <span class="card__description">{{slides[this.currentIndex].description}}</span>
-    <div class="card__shop">
-      <span class="card__shop__label">Shop Now</span>
-      <img style="margin-left: 20px;" src="./../../assets/images/icon-arrow.svg">
-    </div>
-    <!-- Switch Desktop-->
-    <div class="card__container__switch">
-      <div class="card__switch" (click)="onClickArrowLeft()">
-        <div class="card__switch__image">
-          <img src="./../../assets/images/icon-angle-left.svg">
+      <span class="card__text">{{slides[this.currentIndex].title}}</span>
+      <span class="card__description">{{slides[this.currentIndex].description}}</span>
+      <div class="card__shop">
+        <span class="card__shop__label">Shop Now</span>
+        <img style="margin-left: 20px;" src="./../../assets/images/icon-arrow.svg">
+      </div>
+      <!-- Switch Desktop-->
+      <div class="card__container__switch">
+        <div class="card__switch" (click)="onClickArrowLeft()">
+          <div class="card__switch__image">
+            <img src="./../../assets/images/icon-angle-left.svg">
+          </div>
+        </div>
+        <div class="card__switch" (click)="onClickArrowRight()">
+          <div class="card__switch__image">
+            <img src="./../../assets/images/icon-angle-right.svg">
+          </div>
         </div>
       </div>
-      <div class="card__switch" (click)="onClickArrowRight()">
-        <div class="card__switch__image">
-          <img src="./../../assets/images/icon-angle-right.svg">
-        </div>
-      </div>
     </div>
-  </div>
   </div>
 </div>
-
-
 <div class="container__card__images1">
-  <img class="card__images"  src="{{slideStatic[0].img}}">
+  <img class="card__images" src="{{slideStatic[0].img}}">
   <div class="card__image1__text">
     <span class="card__image1__title">{{slideStatic[0].title}}</span>
     <span class="card__image1__description">{{slideStatic[0].description}}</span>
   </div>
-  <img class="card__images"  src="{{slideStatic[0].img2}}">
+  <img class="card__images" src="{{slideStatic[0].img2}}">
 </div>
