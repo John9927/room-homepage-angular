@@ -2,7 +2,10 @@
 <div class="container">
   <!-- Header -->
   <div class="header__container">
-    <img src="./../../assets/images/logo.svg" href="./">
+    <div class="hamburger">
+      <img src="./../../assets/images/icon-hamburger.svg" alt="">
+    </div>
+      <img class="header__image__container" src="./../../assets/images/logo.svg" href="./">
   </div>
   <div class="header__items">
     <a class="header__item" href="/">home</a>
@@ -14,7 +17,7 @@
 
 <!-- Card -->
 <div class="container__card__images">
-  <img src="{{slides[this.currentIndex].img}}">
+  <img class="card__images" srcset="{{slides[this.currentIndex].img}}, {{slides[this.currentIndex].imgMobile}} 375w" >
   <div class="card__container__text">
     <div class="container__text">
     <span class="card__text">{{slides[this.currentIndex].title}}</span>
@@ -42,10 +45,10 @@
 
 
 <div class="container__card__images1">
-  <img src="{{slideStatic[0].img}}">
+  <img class="card__images"  src="{{slideStatic[0].img}}">
   <div class="card__image1__text">
     <span class="card__image1__title">{{slideStatic[0].title}}</span>
     <span class="card__image1__description">{{slideStatic[0].description}}</span>
   </div>
-  <img src="{{slideStatic[0].img2}}">
+  <img class="card__images"  src="{{slideStatic[0].img2}}">
 </div>

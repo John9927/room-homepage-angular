@@ -19,15 +19,12 @@
   align-items: center;
 }
 
-img {
-  cursor: pointer;
-}
-
 .header__items {
   display: grid;
   grid-auto-flow: column;
   gap: 30px;
 }
+
 .header__item {
   display: grid;
   text-decoration: none;
@@ -35,6 +32,21 @@ img {
   font-size: 16px;
 }
 
+.header__item:hover {
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 0 auto;
+
+  .header__image__container:hover {
+    margin-top: -2px;
+  }
+}
+
+.hamburger {
+  display: none;
+}
 
 // Card
 
@@ -81,6 +93,11 @@ img {
   letter-spacing: 8px;
   font-weight: 600;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.card__shop__label:hover {
+  color: hsl(0, 0%, 27%);
 }
 
 .card__container__switch {
@@ -102,6 +119,10 @@ img {
   cursor: pointer;
   justify-content: center;
   margin-right: -1px;
+}
+
+.card__switch:hover {
+  background:  hsl(0, 0%, 27%);
 }
 
 .card__switch__image {
@@ -150,4 +171,54 @@ img {
   flex-direction: column;
   width: 70%;
   margin: auto;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .header__items {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .container__card__images {
+    grid-template-rows: auto;
+    grid-template-columns: none;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: left;
+    left: 0;
+    position: absolute;
+    margin-left: 30px;
+  }
+
+  .card__text {
+    margin-top: 0px;
+  }
+
+  .container__card__images1 {
+    grid-template-columns: none;
+  }
+
+  .card__container__text {
+    position: inherit;
+  }
+
+  .card__images {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  .card__container__switch {
+    bottom: inherit;
+  }
 }

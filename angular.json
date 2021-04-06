@@ -29,7 +29,7 @@
             ],
             "styles": [
               "./node_modules/normalize.css/normalize.css",
-              "sc/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
